@@ -1,0 +1,23 @@
+form
+  select name="usage[activity]"
+    option Choose an activity
+    option Walk
+    option Cycle
+    option Motorcycle
+    option Car
+
+  select name="usage[detail]"
+    option 2-takt < 50cc
+    option 2-takt > 50cc
+    option 4-takt < 250cc
+    option 4-takt > 250cc
+
+  input name="usage[quantity]" type="number"
+  label
+    input name="usage[unit]" type="radio" value="km"
+    | KM
+  label
+    input name="usage[unit]" type="radio" value="ml"
+    | ML
+
+  texarea name="usage[comment]"
