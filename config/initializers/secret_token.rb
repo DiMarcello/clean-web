@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-CleanWeb::Application.config.secret_key_base = '596bdc7b00d719e4dc4eae6d7922a4076919e0ba7131d576f1fec2b6113bb88bfd235610efa77165f47334d128d48306c646779a4a9a5fb57a413dce1517cacb'
+CleanWeb::Application.config.secret_key_base = ENV['SECRET_TOKEN']
