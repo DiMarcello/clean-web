@@ -19,8 +19,6 @@ development:
   encoding: unicode
   database: clean-web_development
   pool: 5
-  username: clean-web
-  password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,13 +46,9 @@ test:
   encoding: unicode
   database: clean-web_test
   pool: 5
-  username: clean-web
-  password:
 
 production:
   adapter: postgresql
   encoding: unicode
   database: clean-web_production
   pool: 5
-  username: clean-web
-  password:
