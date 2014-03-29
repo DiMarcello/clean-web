@@ -6,4 +6,8 @@ class Usage < ActiveRecord::Base
   validates :activity_variant, presence: true
   validates :quantity, presence: true
   validates :unit, presence: true
+
+  def consumption
+    Unit("#{quantity} #{unit}")
+  end
 end

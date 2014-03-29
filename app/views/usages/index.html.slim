@@ -1,0 +1,12 @@
+table
+  thead
+    tr
+      th Activity
+      th Variant
+      th Consumption
+  tbody
+    - @usages.each do |usage|
+      tr
+        td= usage.activity.name
+        td= usage.activity_variant.name
+        td= usage.consumption

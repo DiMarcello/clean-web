@@ -1,0 +1,13 @@
+= form_for @usage do |form|
+  p= form.collection_select :activity_id, @activities, :id, :name
+  p= form.grouped_collection_select :activity_variant_id, @activities, :variants, :name, :id, :name
+  p
+    = form.number_field :quantity
+    = form.label :unit_km
+      = form.radio_button :unit, 'km', checked: true
+      | km
+    = form.label :unit_ml
+      = form.radio_button :unit, 'ml'
+      | ml
+  p= form.submit
+
