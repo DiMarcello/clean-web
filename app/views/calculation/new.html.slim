@@ -3,8 +3,12 @@ article.calculation
   = form_for(calculation_path, method: :post)
     section.input
       label Select input
-      select name="calculation[activity_variant_id]"
+      select.activity_variant name="calculation[activity_variant_id]"
         = option_groups_from_collection_for_select @activities, :variants, :name, :id, :name
+      input.quantity name="calculation[quantity]"
+      select.unit name="calculation[unit]"
+        option value="km" checked="checked" km
+        option value="ml" km
 
     section.output
       label Select output

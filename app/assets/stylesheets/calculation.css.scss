@@ -6,17 +6,25 @@ article.calculation {
   label {
     display: block;
     padding: 20px;
+    font-size: 34px;
   }
 
   .input {
     label {
       background-color: #40BF4B;
       color: white;
-      font-size: 34px;
     }
 
-    select {
+    select.activity_variant {
       width: 100%;
+    }
+
+    input.quantity {
+      width: 79%;
+    }
+
+    select.unit {
+      width: 20%;
     }
   }
 
@@ -24,7 +32,6 @@ article.calculation {
     label {
       background-color: #6cc974;
       color: white;
-      font-size: 34px;
     }
   }
 
