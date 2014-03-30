@@ -8,4 +8,7 @@ class Conversion < ActiveRecord::Base
     Unit(unit)
   end
 
+  def convert(source_co2)
+    "#{source_co2 / co2} #{ unit }"
+  end
 end

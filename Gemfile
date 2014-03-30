@@ -42,6 +42,9 @@ end
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
+
+  #gem "pry"
+  #gem "pry-stack_explorer"
 end
 
 # Use ActiveModel has_secure_password
