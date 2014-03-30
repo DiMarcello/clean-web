@@ -1,6 +1,6 @@
 article.calculation
   form method="POST"
-  = form_for(calculation_path, method: :post)
+  = form_for(@calculation, url: calculation_path, method: :post)
     section.input
       label Select input
       select name="calculation[activity_variant_id]"
