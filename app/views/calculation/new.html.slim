@@ -1,5 +1,6 @@
 article.calulcation
   form method="POST"
+  = form_for(calculation_path, method: :post)
     section.input
       label Select input
       select name="calculation[activity_variant_id]"
@@ -10,5 +11,8 @@ article.calulcation
       select name="calculation[conversion_id]"
         = options_from_collection_for_select @conversions, :id, :name
 
+    input type="submit"
+
   section.result
+    = @value
 
