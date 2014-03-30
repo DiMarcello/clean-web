@@ -11,6 +11,15 @@ article.calculation {
     font-size: 30px;
   }
 
+  select {
+    border: none;
+    display: inline-block;
+    background: none;
+    -webkit-appearance: initial;
+    font-size: 26px;
+    padding: 20px 0;
+  }
+
   .control {
     margin-left: 120px;
     height: 80px;
@@ -40,6 +49,10 @@ article.calculation {
 
     input.quantity {
       width: 78%;
+      border: none;
+      background: none;
+      font-size: 26px;
+      text-align: right;
     }
 
     select.unit {

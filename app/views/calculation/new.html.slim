@@ -4,7 +4,7 @@ article.calculation
     section.input
       label Select input
       .control
-        = form.grouped_collection_select :activity_variant_id, @activities, :variants, :name, :id, :name, class: 'activity_variant'
+        = form.grouped_collection_select :activity_variant_id, @activities, :variants, :name, :id, :name, {}, class: 'activity_variant'
       .control
         = form.text_field :quantity, class: 'quantity'
         = form.select :unit, ['km', 'ml'], {}, class: 'unit'
