@@ -27,10 +27,10 @@ end
   @activities[:motorcycle].variants.create name: name
 end
 
-["Diesel (from 2006): Urban use", "Diesel (from 2006): Rural use", "Diesel (from 2006): Motorway use",
+[["Diesel (from 2006): Urban use", "0.0023"], "Diesel (from 2006): Rural use", "Diesel (from 2006): Motorway use",
  "Diesel (2001-2006): Urban use", "Diesel (2001-2006): Rural use", "Diesel (2001-2006): Motorway use",
- "Diesel (1996-2001): Urban use", "Diesel (1996-2001): Rural use", "Diesel (1996-2001): Motorway use"].each do |name|
-  @activities[:bus].variants.create name: name
+ "Diesel (1996-2001): Urban use", "Diesel (1996-2001): Rural use", "Diesel (1996-2001): Motorway use"].each do |(name, carbon)|
+  @activities[:bus].variants.create name: name, co2: BigDecimal.new(carbon)
 end
 
 ["Black cab TXII [until 06]: Diesel", "Black cab TX4 [from 06]: Diesel",

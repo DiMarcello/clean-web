@@ -60,4 +60,4 @@ gem 'slim', '2.0.0'
 gem 'ruby-units'
 gem 'zurb-foundation'
 
-gem 'nokogiri'
+gem 'select2-rails'

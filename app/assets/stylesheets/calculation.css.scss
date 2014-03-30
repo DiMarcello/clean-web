@@ -1,0 +1,31 @@
+// Place all the styles related to the calculator controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+article.calculation {
+  label {
+    display: block;
+    padding: 20px;
+  }
+
+  .input {
+    label {
+      background-color: #40BF4B;
+      color: white;
+      font-size: 34px;
+    }
+
+    select {
+      width: 100%;
+    }
+  }
+
+  .output {
+    label {
+      background-color: #6cc974;
+      color: white;
+      font-size: 34px;
+    }
+  }
+
+}
