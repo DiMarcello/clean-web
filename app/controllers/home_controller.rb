@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    authenticate_user!
+    # authenticate_user!
+    @usage = Usage.new
   end
 end

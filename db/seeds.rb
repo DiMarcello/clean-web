@@ -34,8 +34,3 @@ end
  "Minicab passenger car: Diesel", "Minicab passenger car: Petrol"].each do |name|
   @activities[:taxi].variants.create name: name
 end
-
-["Black cab TXII [until 06]: Diesel", "Black cab TX4 [from 06]: Diesel",
- "Minicab passenger car: Diesel", "Minicab passenger car: Petrol"].each do |name|
-  @activities[:taxi].variants.create name: name
-end

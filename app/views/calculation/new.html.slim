@@ -1,0 +1,6 @@
+article.calulcation
+  form method="POST"
+    div.input
+      label Select input
+      select name="calculation[activity_variant_id]"
+        = option_groups_from_collection_for_select @activities, :variants, :name, :id, :name

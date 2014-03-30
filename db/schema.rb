@@ -11,10 +11,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140329194243) do
+ActiveRecord::Schema.define(version: 20140330005133) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "activity_variants", force: true do |t|
+    t.string   "name"
+    t.integer  "activity_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.decimal  "co2"
+  end
+
+  add_index "activity_variants", ["activity_id"], name: "index_activity_variants_on_activity_id", using: :btree
+
+  create_table "conversions", force: true do |t|
+    t.string   "name"
+    t.decimal  "co2"
+    t.string   "unit"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "usages", force: true do |t|
+    t.integer  "activity_id"
+    t.integer  "activity_variant_id"
+    t.decimal  "quantity"
+    t.string   "unit"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "usages", ["activity_id"], name: "index_usages_on_activity_id", using: :btree
+  add_index "usages", ["activity_variant_id"], name: "index_usages_on_activity_variant_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name",                   default: "", null: false
