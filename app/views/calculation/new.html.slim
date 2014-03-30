@@ -1,21 +1,28 @@
 article.calculation
   form method="POST"
-  = form_for(@calculation, url: calculation_path, method: :post)
+  = form_for @calculation, url: calculation_path, method: :post do |form|
     section.input
       label Select input
-      select.activity_variant name="calculation[activity_variant_id]"
-        = option_groups_from_collection_for_select @activities, :variants, :name, :id, :name
-      input.quantity name="calculation[quantity]"
-      select.unit name="calculation[unit]"
-        option value="km" checked="checked" km
-        option value="ml" km
+      .control
+        = form.grouped_collection_select :activity_variant_id, @activities, :variants, :name, :id, :name, class: 'activity_variant'
+      .control
+        = form.text_field :quantity, class: 'quantity'
+        = form.select :unit, ['km', 'ml'], {}, class: 'unit'
 
     section.output
       label Select output
-      select name="calculation[conversion_id]"
-        = options_from_collection_for_select @conversions, :id, :name
+      .control
+        = form.collection_select :conversion_id, @conversions, :id, :name
 
-    input type="submit"
+    section.actions
+      input type="submit" value="Convert"
 
   section.result
-    = @value
+    .amount
+      - if @calculation.result
+        - if @calculation.result < 1
+          | &lt; 1
+        - else
+          = @calculation.result.to_i
+        | &nbsp;
+        = @calculation.unit

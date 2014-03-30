@@ -3,35 +3,85 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 article.calculation {
+  font-size: 30px;
+
   label {
     display: block;
     padding: 20px;
-    font-size: 34px;
+    font-size: 30px;
+  }
+
+  .control {
+    margin-left: 120px;
+    height: 80px;
+
+    + .control {
+      border-top: 1px solid grey;
+    }
+  }
+
+  .input, .output {
+    background-color: #e8ffee;
+    background-position: 18px 70px;
+    background-repeat: no-repeat;
   }
 
   .input {
+    background-image: image-url('element.png');
+
     label {
       background-color: #40BF4B;
       color: white;
     }
 
     select.activity_variant {
-      width: 100%;
+      width: 98%;
     }
 
     input.quantity {
-      width: 79%;
+      width: 78%;
     }
 
     select.unit {
-      width: 20%;
+      margin-left: 2%;
+      width: 18%;
+    }
+
+    .control {
     }
   }
 
   .output {
+    background-image: image-url('element2.png');
+
     label {
-      background-color: #6cc974;
+      background-color: #70fb7c;
       color: white;
+    }
+  }
+
+  .actions {
+    text-align: center;
+    padding: 50px 0;
+
+    input[type=submit] {
+      background-image: image-url('converse-button2.png');
+      border: none;
+      width: 335px;
+      height: 87px;
+      color: white;
+      font-size: 30px;
+    }
+  }
+
+  .result {
+    background-image: image-url('wereld1.png');
+    padding-top: 90px;
+    min-height: 515px;
+
+    .amount {
+      font-size: 30px;
+      text-align: center;
     }
   }
 

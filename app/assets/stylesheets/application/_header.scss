@@ -1,7 +1,14 @@
 header.topbar {
-  background-color: #86dd85;
+  background-color: #fff;
+  text-align: center;
 
   h1 {
     display: inline-block;
+    font-size: 30px;
+    font-weight: normal;
+  }
+
+  .logout {
+    float: right;
   }
 }
