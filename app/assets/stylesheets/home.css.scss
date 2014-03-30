@@ -2,4 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+article.landing-home {
+  background-color: #dbdbdb;
+  min-height: 800px;
+  text-align: center;
 
+  h1 {
+    font-size: 30px;
+    font-weight: normal;
+  }
+
+  .cars {
+    background-image: image-url('splash_groen.png');
+    background-repeat: no-repeat;
+    height: 513px;
+    width: 640px;
+  }
+
+  .login-button {
+  }
+
+}

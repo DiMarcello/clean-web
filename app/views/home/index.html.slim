@@ -1,4 +1,14 @@
-h3 Hello #{current_user.name}
+article.landing-home
+  header.cars
 
-/=render 'usages/form', usage: @usage
+  section
+    h1
+      | Become
+      strong &nbsp;conscious
+      |  of your consumption
+
+    = link_to user_omniauth_authorize_path(provider: 'facebook') do
+      = image_tag 'app_facebook.png', class: 'login-button'
+
+    /=render 'usages/form', usage: @usage
 

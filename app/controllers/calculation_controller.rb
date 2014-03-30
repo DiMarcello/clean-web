@@ -1,4 +1,5 @@
 class CalculationController < ApplicationController
+  layout 'calculator'
 
   def new
     @activities = Activity.all.includes(:variants).load

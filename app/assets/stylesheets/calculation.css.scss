@@ -7,8 +7,9 @@ article.calculation {
 
   label {
     display: block;
-    padding: 20px;
-    font-size: 30px;
+    padding: 16px;
+    font-size: 24px;
+    font-weight: lighter;
   }
 
   select {
@@ -16,13 +17,18 @@ article.calculation {
     display: inline-block;
     background: none;
     -webkit-appearance: initial;
-    font-size: 26px;
-    padding: 20px 0;
+    font-size: 24px;
+    font-weight: lighter;
+    padding: 16px 0;
+    background-image: image-url('hoek_element.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+
   }
 
   .control {
     margin-left: 120px;
-    height: 80px;
+    height: 65px;
 
     + .control {
       border-top: 1px solid grey;
@@ -31,7 +37,7 @@ article.calculation {
 
   .input, .output {
     background-color: #e8ffee;
-    background-position: 18px 70px;
+    background-position: 18px 56px;
     background-repeat: no-repeat;
   }
 
@@ -39,7 +45,7 @@ article.calculation {
     background-image: image-url('element.png');
 
     label {
-      background-color: #40BF4B;
+      background-color: #327326;
       color: white;
     }
 
@@ -68,8 +74,12 @@ article.calculation {
     background-image: image-url('element2.png');
 
     label {
-      background-color: #70fb7c;
+      background-color: #78c44d;
       color: white;
+    }
+
+    select.conversion {
+      width: 98%;
     }
   }
 
@@ -83,7 +93,7 @@ article.calculation {
       width: 335px;
       height: 87px;
       color: white;
-      font-size: 30px;
+      font-size: 24px;
     }
   }
 

@@ -4,7 +4,7 @@ article.calculation
     section.input
       label Select input
       .control
-        = form.grouped_collection_select :activity_variant_id, @activities, :variants, :name, :id, :name, {}, class: 'activity_variant'
+        = form.grouped_collection_select :activity_variant_id, @activities, :variants, :name, :id, :name, {prompt: true}, class: 'activity_variant'
       .control
         = form.text_field :quantity, class: 'quantity'
         = form.select :unit, ['km', 'ml'], {}, class: 'unit'
@@ -12,7 +12,7 @@ article.calculation
     section.output
       label Select output
       .control
-        = form.collection_select :conversion_id, @conversions, :id, :name
+        = form.collection_select :conversion_id, @conversions, :id, :name, {prompt: true}, class: 'conversion'
 
     section.actions
       input type="submit" value="Convert"
